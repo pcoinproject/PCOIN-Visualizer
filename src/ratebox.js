@@ -14,7 +14,7 @@ function setGlobalRate(rate) {
 }
 
 rateboxGetRate = function() {
-	$.getJSON("https://blockchain.info/ticker?cors=true", function(data) {
+	$.getJSON("https://explorer.pcoin.dev/ticker?cors=true", function(data) {
         setGlobalRate(data.USD.last);
     });
 };

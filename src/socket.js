@@ -2,7 +2,7 @@ var satoshi = 100000000;
 var DELAY_CAP = 20000;
 var lastBlockHeight = 0;
 
-var provider_name = "testprovider.org";
+var provider_name = "explorer.pcoin.dev";
 
 var transactionSocketDelay = 1000;
 
@@ -63,13 +63,13 @@ function checkForNewTxOrBlock() {
 	mempoolReq = null;
 	mempoolReq = new XMLHttpRequest();
 	mempoolReq.onload = processMempool;
-	mempoolReq.open('GET', 'https://test.test/api/mempool');
+	mempoolReq.open('GET', 'https://explorer.pcoin.dev/api/mempool');
 	mempoolReq.send();
 	// Check for a new block
 	blockReq = null;
 	blockReq = new XMLHttpRequest();
 	blockReq.onload = processBlock;
-	blockReq.open('GET', 'https://test.test/api/bestblock');
+	blockReq.open('GET', 'https://explorer.pcoin.dev/api/bestblock');
 	blockReq.send();
 }
 
