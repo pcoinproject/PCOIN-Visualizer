@@ -7,11 +7,24 @@
 		<title>PCOIN Transaction Visualizer</title>
 		<meta name="title" content="PCOIN Transaction Visualizer">
 		<meta name="description" content="Realtime PCOIN transaction visualizer. See and hear new transactions and blocks as they occur.">
-		<meta name="keywords" content="BitListen,Listen To Bitcoin,Listen To PCOIN,PCOIN,transactions,visualizer,trades,mtgox,blockchain">		
+		<meta name="keywords" content="PCOIN-Visualizer,Listen To Bitcoin,Listen To PCOIN,PCOIN,transactions,visualizer,trades,blockchain">		
 		<meta name="author" content="PCOIN Dev Team">
 
 		<meta name="mobile-web-app-capable" content="yes">
-	  	<!-- Colour Theme -->
+	  
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website">
+		<meta property="og:url" content="https://visualizer.pcoin.dev">
+		<meta property="og:title" content="PCOIN Transaction Visualizer">
+		<meta property="og:description" content="Realtime PCOIN transaction visualizer. See and hear new transactions and blocks as they occur.">
+	  
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image">
+		<meta property="twitter:url" content="https://visualizer.pcoin.dev">
+		<meta property="twitter:title" content="PCOIN Transaction Visualizer">
+		<meta property="twitter:description" content="Realtime PCOIN transaction visualizer. See and hear new transactions and blocks as they occur.">
+
+		<!-- Colour Theme -->
 		<meta name="msapplication-TileColor" content="#470e75">
 		<meta name="theme-color" content="#470e75">
 		<!--[if IE]>
@@ -22,14 +35,14 @@
 		<script src="https://js.pusher.com/2.2/pusher.min.js"></script>
 		<script src="bitlisten.min.js" type="text/javascript"></script>
 
-		<!-- Structured data (remove or update this when forking BitListen) -->
+		<!-- Structured data (remove or update this when forking PCOIN-Visualizer) -->
 	        <script type="application/ld+json">
 	        {
 	          "@context": "http://schema.org",
 	          "@type": "WebApplication",
 	          "name": "PCOIN-Visualizer",
 	          "alternateName": "Listen To PCOIN",
-	          "url": "https://pcoinproject.github.io/PCOIN-Visualizer",
+	          "url": "https://visualizer.pcoin.dev/",
 	          "applicationCategory": "Visualization",
 	          "license": "https://opensource.org/licenses/MIT",
 	          "operatingSystem": "all",
@@ -53,22 +66,13 @@
 	</head>
 	<body>
 		<div id="header" class="interface">
-			<div style="display: none;" id="rateBox">
-				<span id="rate">---</span> <span id="units">USD / PCOIN</span><br />
-				<span class="rateButton" id="bitstampRate" onclick="switchExchange('bitstamp');">Bitstamp</span>
-			</div>
-			<img src="images/logo.svg" alt="BitListen">
+			<img src="images/logo.svg" alt="PCOIN-Visualizer">
 			<div id="headerInfo" style="font-family: Helvetica;">
 				<p>
 					Realtime PCOIN transaction visualizer.
 				</p>
-				<p style="display: none;">
-					Most donations get highlighted: <span id="donationAddress" qrtarget="bitcoin:1istendqWJ1mKvrdRUQZDL2F3tVDDyKdj">1istendqWJ1mKvrdRUQZDL2F3tVDDyKdj</span>
-					<br />
-					<span id="musicianDonation"></span>
-				</p>
 				<p class="subdued">
-					By <a href="https://github.com/pcoinproject">PCOIN Project</a> &bull; <a href="https://github.com/pcoinproject/PCOIN-Visualizer">Source Code</a>
+					By <a href="https://github.com/pcoinproject/">PCOIN Dev Team</a> &bull; <a href="https://github.com/pcoinproject/PCOIN-Visualizer">Source Code</a>
 				</p>
 			</div>
 		</div>
@@ -111,12 +115,6 @@
 								<label>
 									<input id="scalePitchCheckBox" type='checkbox' checked="checked" onchange='globalScalePitch = this.checked'>
 										Scale pitch with transaction amount<br />(bigger transaction = deeper sound)
-								</label>
-							</p>
-							<p style="display: none;">
-								<label class="disabled">
-								    <input id="showDollarCheckBox" type='checkbox' onchange='globalShowDollar = this.checked' disabled="disabled">
-									Show units in USD instead of PCOIN
 								</label>
 							</p>
 						</div>
