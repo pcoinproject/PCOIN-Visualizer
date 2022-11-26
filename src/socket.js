@@ -69,7 +69,7 @@ function getTx(strHash) {
 
 	const txReq = new XMLHttpRequest();
 	txReq.onload = function () { processTx(txReq) };
-	txReq.open('GET', 'https://zkbitcoin.com/api/v2/tx/' + strHash);
+	txReq.open('GET', 'https://explorer.pcoin.dev/api/v2/tx/' + strHash);
 	txReq.send();
 }
 
@@ -83,7 +83,7 @@ function checkForNewTxOrBlock(fBlockOnly = false, strBlockHash = strLastBlock) {
 			const arrMempool = JSON.parse(mempoolReq.responseText).mempool;
 			arrMempool.forEach(cTx => getTx(cTx.txid));
 		};
-		mempoolReq.open('GET', 'https://zkbitcoin.com/api/v2/mempool/');
+		mempoolReq.open('GET', 'https://explorer.pcoin.dev/api/v2/mempool/');
 		mempoolReq.send();
 	}
 
@@ -94,13 +94,13 @@ function checkForNewTxOrBlock(fBlockOnly = false, strBlockHash = strLastBlock) {
 			strLastBlock = JSON.parse(initBlockReq.responseText).backend.bestBlockHash;
 			checkForNewTxOrBlock(true);
 		};
-		initBlockReq.open('GET', 'https://zkbitcoin.com/api/v2/api');
+		initBlockReq.open('GET', 'https://explorer.pcoin.dev/api/v2/api');
 		initBlockReq.send();
 	} else {
 		// Otherwise, fetch the current block (or next block if available)
 		const blockReq = new XMLHttpRequest();
 		blockReq.onload = function () { processBlock(blockReq) };
-		blockReq.open('GET', 'https://zkbitcoin.com/api/v2/block/' + strBlockHash);
+		blockReq.open('GET', 'https://explorer.pcoin.dev/api/v2/block/' + strBlockHash);
 		blockReq.send();
 	}
 }
