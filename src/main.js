@@ -4,7 +4,7 @@ let DEBUG_MODE = false;
 
 const COIN = 1e8;
 
-const provider_name = "explorer.pcoin.dev";
+const provider_name = "mainnet.pcoin.dev";
 
 let DONATION_ADDRESS;
 
