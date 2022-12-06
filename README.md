@@ -9,7 +9,7 @@
 
 </div>
 
-Current version hosted at [**pcoinproject.github.io/PCOIN-Visualizer**](https://visualizer.pcoin.dev). Forked from a project formerly known as "Listen to Bitcoin" (ListenToBitcoin.com has been sold.)
+Current version hosted at [**visualizer.pcoin.dev**](https://visualizer.pcoin.dev). Forked from a project formerly known as "Listen to Bitcoin" (ListenToBitcoin.com has been sold.)
 
 Realtime PCOIN transaction visualizer written in HTML/Javascript. See and hear new transactions and blocks as they propagate through the PCOIN Network.
 
