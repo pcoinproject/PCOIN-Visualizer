@@ -2,7 +2,7 @@
 
 <div align="center">
 
-[![GitHub license](https://img.shields.io/github/license/pcoinproject/PCOIN-Visualizer/)](https://github.com/pcoinproject/PCOIN-Visualizer/blob/gh-pages/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/pcoinproject/PCOIN-Visualizer)](https://github.com/pcoinproject/PCOIN-Visualizer/blob/gh-pages/LICENSE)
 [![Open Source? Yes!](https://badgen.net/badge/Open%20Source%20%3F/Yes%21/blue?icon=github)](https://github.com/pcoinproject/PCOIN-Visualizer)
 [![GitHub commits](https://badgen.net/github/commits/pcoinproject/PCOIN-Visualizer/gh-pages/)](https://GitHub.com/pcoinproject/PCOIN-Visualizer/commit/gh-pages/)
 [![GitHub latest commit](https://badgen.net/github/last-commit/pcoinproject/PCOIN-Visualizer/gh-pages/)](https://GitHub.com/pcoinproject/PCOIN-Visualizer/commit/gh-pages/)
